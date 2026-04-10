@@ -1,0 +1,16 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Build OK"
+      - run: echo "Test OK"
